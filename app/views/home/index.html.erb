@@ -1,16 +1,4 @@
-<div id="page_content">
-  <div id="page_content" class="row">
-	<h2 class="col-xs-6">Your Groups</h2>
-	<div class="row show-grid"></div>
-	 <%current_user.groups.each do |group|%>
-	   <div class="col-xs-7">
-         <%=group.name%>
-       </div>
-     <%end%>
-     <%current_user.groups_as_member.each do |group|%>
-	   <div class="col-xs-7">
-         <%=group.name%>
-       </div>
-     <%end%>
-  </div>
+<h3>Your Groups</h3>
+<div id="group_list" class="table-responsive">
+  <%= render "groups/groups_list"%>
 </div>
