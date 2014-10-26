@@ -1,0 +1,25 @@
+h3 Your Groups
+
+#group_list.group_list.table-responsive
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th Name
+        th Description
+        th style="width:60px;" 
+        th style="width:60px;" 
+        th style="width:150px;" 
+    tbody
+      - for group in @collection.models
+        tr class="group" value="#{group.get('name')}" 
+          td
+            = group.get('name')
+          td
+            = group.get('description')
+          td
+
+          td
+            a.edit_action data-target="#myModal" data-toggle="modal" href="#"  Edit
+          td
+            a data-target="#contribution" data-toggle="modal" href="#"  New Period
+

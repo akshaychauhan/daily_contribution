@@ -39,4 +39,11 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
+gem 'rspec-rails'
+
+gem 'slim-rails'
+gem 'skim'
+gem 'backbone-on-rails'
+
+gem 'gon'
 

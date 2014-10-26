@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731102456) do
+ActiveRecord::Schema.define(version: 20140927112647) do
+
+  create_table "contribution_periods", force: true do |t|
+    t.integer "group_id"
+  end
 
   create_table "contributions", force: true do |t|
     t.integer  "amount"
@@ -20,10 +24,7 @@ ActiveRecord::Schema.define(version: 20140731102456) do
     t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "contrubution_periods", force: true do |t|
-    t.integer "group_id"
+    t.integer  "contribution_period_id"
   end
 
   create_table "group_members", force: true do |t|

@@ -1,6 +1,6 @@
 class AddContributionPeriod < ActiveRecord::Migration
   def change
-  	create_table :contrubution_periods do |t|
+  	create_table :contribution_periods do |t|
       t.belongs_to :group
       
   	end

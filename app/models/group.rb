@@ -3,5 +3,9 @@ class Group < ActiveRecord::Base
   belongs_to :admin, class_name: "User", foreign_key: "user_id"
   has_many :members, through: :group_members, source: :user
   has_many :contributions
+
+  def test
+  	return true
+  end
   
 end

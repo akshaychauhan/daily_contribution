@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
-   before_action :authenticate_user!
+  before_action :authenticate_user!
    
-   def index
-   	@group = Group.new
-   end
+  def index
+    gon.groups = Group.all.select(:id, :name, :description)
+  end
   
 end
