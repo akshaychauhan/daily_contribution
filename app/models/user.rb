@@ -7,5 +7,10 @@ class User < ActiveRecord::Base
   has_many :groups
   has_many :groups_as_member, through: :group_members, source: :group
   has_many :contributions
+
+  def full_text(text1, text2)
+  	puts "................"
+    return text1 + text2
+  end
   
 end

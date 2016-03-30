@@ -3,9 +3,9 @@ window.DC =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: ->
+  initialize: (arg)->
   	Backbone.history.stop()
-  	Backbone.history.start() #unless Backbone.History.started
+  	Backbone.history.start(arg) #unless Backbone.History.started
 
 $(document).ready ->
   

@@ -10,6 +10,7 @@ class DC.Views.IndexView extends Backbone.View
 
   newGroup: ->
     group = new DC.Models.Group()
+    console.log "akshy......."
     group_form_view = new DC.Views.GroupFromView(model: group)
     $(".model_m").html(group_form_view.render().el)
     $("#myModal").modal()

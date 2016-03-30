@@ -5,8 +5,9 @@ class DC.Routers.GroupsRouter extends Backbone.Router
     @collection.reset(gon.groups)
 
   routes:
-    "index" : "index"
-    "new": "newGroup"    
+    "" : "index"
+    "new": "newGroup"
+    '*notFound': 'notFound'   
 
   newGroup:->
     console.log "------------------------------"
@@ -26,5 +27,8 @@ class DC.Routers.GroupsRouter extends Backbone.Router
     console.log @collection
     indexView = new DC.Views.IndexView(collection: @collection)
     $(".mwrapper").html(indexView.render().el)
+
+  notFound: ->
+    console.log("notFound............")
 
 

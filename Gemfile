@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -38,12 +38,20 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "rolify"
+
 gem 'devise'
-gem 'rspec-rails'
 
 gem 'slim-rails'
 gem 'skim'
 gem 'backbone-on-rails'
 
 gem 'gon'
+gem 'pg'
+
+group :test, :development do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'mocha'
+  gem "minitest-spec-rails"
+end
 

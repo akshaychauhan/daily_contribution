@@ -6,4 +6,4 @@
           span aria-hidden="true"  &times;
           span.sr-only Close
         h4#myModalLabel.modal-title Group
-        .modal-body
+      .modal-body
